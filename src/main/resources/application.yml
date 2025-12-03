@@ -1,11 +1,28 @@
 spring:
   application:
     name: demo-springboot4
+
   http:
     serviceclient:
       pokemon:
-        baseUrl: https://pokeapi.co/api/v2
-        connectTimeout: 3s
-        readTimeout: 5s
+        base-url: https://pokeapi.co/api/v2
+        connect-timeout: 3s
+        read-timeout: 5s
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  tracing:
+    sampling:
+      probability: 1.0
+  opentelemetry:
+    tracing:
+      export:
+        otlp:
+          endpoint: http://localhost:4318/v1/traces
+  otlp:
+    metrics:
+      export:
+        url: http://localhost:4318/v1/metrics
