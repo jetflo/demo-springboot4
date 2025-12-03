@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: demo-springboot4
+  http:
+    serviceclient:
+      pokemon:
+        baseUrl: https://pokeapi.co/api/v2
+        connectTimeout: 3s
+        readTimeout: 5s
+
+
