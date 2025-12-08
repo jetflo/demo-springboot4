@@ -1,6 +1,6 @@
 package com.jetdev.demospringboot4.clients.pokemon;
 
 public record PokemonSpeciesResponse(
-        Boolean isLegendary,
-        Boolean isMythical
+        Integer capture_rate,
+        Integer base_happiness
 ) {}

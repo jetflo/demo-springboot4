@@ -4,7 +4,5 @@ public record PokemonDto(
         Long id,
         String name,
         Integer height,
-        Integer weight,
-        Boolean legendary,
-        Boolean mythical
+        Integer weight
 ) {}
